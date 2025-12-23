@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
+@Component // 切面也是一种特殊的bean
 public class ZhouyuAspect {
 
 	@Pointcut("execution(public void com.zhouyu.service.UserService.test())")
@@ -19,6 +19,7 @@ public class ZhouyuAspect {
 
 	@Before("a()")
 	public void zhouyuBefore(JoinPoint joinPoint) {
+//		joinPoint.getTarget()
 		System.out.println("zhouyuBefore");
 	}
 

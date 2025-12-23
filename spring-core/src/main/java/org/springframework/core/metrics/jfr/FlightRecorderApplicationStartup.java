@@ -56,5 +56,10 @@ public class FlightRecorderApplicationStartup implements ApplicationStartup {
 		return new FlightRecorderStartupStep(sequenceId, name,
 				this.currentSteps.getFirst(), committedStep -> this.currentSteps.removeFirstOccurrence(sequenceId));
 	}
+//	JDK JFR 干什么的
+
+//	@Override
+//	public void end() {
+//	}
 
 }

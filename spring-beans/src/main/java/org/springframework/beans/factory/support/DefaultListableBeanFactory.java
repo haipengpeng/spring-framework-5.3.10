@@ -940,19 +940,21 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 			// 获取合并后的BeanDefinition
 			RootBeanDefinition bd = getMergedLocalBeanDefinition(beanName);
 
+			// xml bean abstract = true  bean 父子关系 多例原型
 			if (!bd.isAbstract() && bd.isSingleton() && !bd.isLazyInit()) {
-				if (isFactoryBean(beanName)) {
+				if (isFactoryBean(beanName)) {//
 					// 获取FactoryBean对象
 					Object bean = getBean(FACTORY_BEAN_PREFIX + beanName);
 					if (bean instanceof FactoryBean) {
 						FactoryBean<?> factory = (FactoryBean<?>) bean;
 						boolean isEagerInit;
-						if (System.getSecurityManager() != null && factory instanceof SmartFactoryBean) {
+						if (System.getSecurityManager() != null && factory instanceof SmartFactoryBean) {//安全管理器
 							isEagerInit = AccessController.doPrivileged(
 									(PrivilegedAction<Boolean>) ((SmartFactoryBean<?>) factory)::isEagerInit,
 									getAccessControlContext());
 						}
 						else {
+							// SmartFactoryBean 启动时候会getObject()生成对象
 							isEagerInit = (factory instanceof SmartFactoryBean &&
 									((SmartFactoryBean<?>) factory).isEagerInit());
 						}
@@ -972,12 +974,13 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 		// 所有的非懒加载单例Bean都创建完了后
 		// Trigger post-initialization callback for all applicable beans...
 		for (String beanName : beanNames) {
+			// 从单例池去拿
 			Object singletonInstance = getSingleton(beanName);
 			if (singletonInstance instanceof SmartInitializingSingleton) {
 				StartupStep smartInitialize = this.getApplicationStartup().start("spring.beans.smart-initialize")
-						.tag("beanName", beanName);
+						.tag("beanName", beanName);// 记录执行时间
 				SmartInitializingSingleton smartSingleton = (SmartInitializingSingleton) singletonInstance;
-				if (System.getSecurityManager() != null) {
+				if (System.getSecurityManager() != null) {//安全管理器
 					AccessController.doPrivileged((PrivilegedAction<Object>) () -> {
 						smartSingleton.afterSingletonsInstantiated();
 						return null;

@@ -1,15 +1,13 @@
 package com.zhouyu;
 
-import com.zhouyu.service.OrderService;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.scheduling.TaskScheduler;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.SchedulingConfigurer;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -21,7 +19,7 @@ import javax.sql.DataSource;
 @EnableTransactionManagement
 @Configuration // --事务  dataSource 不同对象 执行sql新建链接，没有用事务管理器的链接  代理模式，代理对象
 //@EnableAspectJAutoProxy
-public class AppConfig {
+public class AppConfig1 {
 
 //	// @Bean会覆盖Component
 //	@Bean

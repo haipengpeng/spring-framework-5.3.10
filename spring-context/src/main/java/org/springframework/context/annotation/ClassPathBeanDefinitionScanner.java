@@ -58,6 +58,7 @@ import org.springframework.util.PatternMatchUtils;
  */
 public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateComponentProvider {
 
+	// DefaultListableBeanFactory
 	private final BeanDefinitionRegistry registry;
 
 	private BeanDefinitionDefaults beanDefinitionDefaults = new BeanDefinitionDefaults();
@@ -278,6 +279,7 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 				String beanName = this.beanNameGenerator.generateBeanName(candidate, this.registry);
 
 				if (candidate instanceof AbstractBeanDefinition) {
+					// 赋默认值
 					postProcessBeanDefinition((AbstractBeanDefinition) candidate, beanName);
 				}
 				if (candidate instanceof AnnotatedBeanDefinition) {
@@ -286,7 +288,7 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 				}
 
 				// 检查Spring容器中是否已经存在该beanName
-				if (checkCandidate(beanName, candidate)) {
+				if (checkCandidate(beanName, candidate)) {//candidate对象
 					BeanDefinitionHolder definitionHolder = new BeanDefinitionHolder(candidate, beanName);
 					definitionHolder =
 							AnnotationConfigUtils.applyScopedProxyMode(scopeMetadata, definitionHolder, this.registry);
@@ -352,6 +354,7 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 		if (isCompatible(beanDefinition, existingDef)) {
 			return false;
 		}
+		// 命名重复 @Component(相同名字)
 		throw new ConflictingBeanDefinitionException("Annotation-specified bean name '" + beanName +
 				"' for bean class [" + beanDefinition.getBeanClassName() + "] conflicts with existing, " +
 				"non-compatible bean definition of same name and class [" + existingDef.getBeanClassName() + "]");

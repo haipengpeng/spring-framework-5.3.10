@@ -69,7 +69,7 @@ public interface ClassMetadata {
 	 * it is a top-level class or a nested class (static inner class) that
 	 * can be constructed independently from an enclosing class.
 	 *
-	 * 到底是顶级类还是嵌套类(静态内部类)，可以独立于外部类构造
+	 * 到底是顶级类还是嵌套类(静态内部类)，可以独立于外部类构造，内部类不为bean
 	 */
 	boolean isIndependent();
 
