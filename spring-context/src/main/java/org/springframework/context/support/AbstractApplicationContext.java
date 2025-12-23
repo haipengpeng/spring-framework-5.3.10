@@ -577,7 +577,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				// 而这6个中只有一个BeanFactoryPostProcessor：ConfigurationClassPostProcessor
 				// 这里会执行ConfigurationClassPostProcessor进行@Component的扫描，扫描得到BeanDefinition，并注册到beanFactory中
 				// 注意：扫描的过程中可能又会扫描出其他的BeanFactoryPostProcessor，那么这些BeanFactoryPostProcessor也得在这一步执行
-				invokeBeanFactoryPostProcessors(beanFactory);  // scanner.scan()
+				invokeBeanFactoryPostProcessors(beanFactory);  // scanner.scan() 扫描
 
 				// Register bean processors that intercept bean creation.
 				// 将扫描到的BeanPostProcessors实例化并排序，并添加到BeanFactory的beanPostProcessors属性中去

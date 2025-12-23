@@ -207,6 +207,7 @@ public class SimpleAliasRegistry implements AliasRegistry {
 	 * @return the transformed name
 	 */
 	public String canonicalName(String name) {
+		// 去掉&&&&
 		String canonicalName = name;
 		// Handle aliasing...
 		String resolvedName;
