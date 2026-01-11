@@ -188,7 +188,7 @@ public abstract class ClassUtils {
 	public static ClassLoader getDefaultClassLoader() {
 		ClassLoader cl = null;
 
-		// 优先获取线程中的类加载器
+		// 优先获取线程中的类加载器  tomcat 自定义加载器
 		try {
 			cl = Thread.currentThread().getContextClassLoader();
 		}

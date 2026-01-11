@@ -3,6 +3,7 @@ package com.zhouyu.service;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Lookup;
 import org.springframework.context.annotation.Bean;
@@ -27,6 +28,24 @@ import java.util.Date;
 
 //public abstract class UserService  {
 public class UserService  {
+
+	public UserService() {
+
+	}
+
+	// spring 自带的
+	@Bean(autowire = Autowire.BY_NAME)
+	public UserService UserService() {
+//	public UserService(OrderService orderService123) {
+		System.out.println(2);
+		return new UserService();
+
+	}
+
+	public void a(){
+		System.out.println("xxxxxx");
+
+	}
 
 //	class Member {
 //

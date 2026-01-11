@@ -12,19 +12,26 @@ import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.type.AnnotationMetadata;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Map;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -63,17 +70,39 @@ public class Test {
 
 ////xml
 //		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+		// XmlBeanDefinitionReader
 //		UserService userService_xml = (UserService) context.getBean("userService");
 //		userService_xml.test();
-//		// 创建一个Spring容器 // 非懒加载的单例Bean，
+		// 创建一个Spring容器 // 非懒加载的单例Bean，
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		// 原型bean
 		UserService userService = (UserService) applicationContext.getBean("userService");
 		userService.test();
+//		AnnotatedBeanDefinitionReader
+//		Thread.currentThread().setContextClassLoader();
+//		applicationContext.getBeanFactory().setBeanClassLoader();
+
+
+
 
 //		// 等价于
+//		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 //		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//		context.register(AppConfig.class);
+//		context.register(Test.class);
+//		AnnotatedGenericBeanDefinition beanDefinition = (AnnotatedGenericBeanDefinition)context.getBeanDefinition("UserService");
+//		AnnotationMetadata metadata = beanDefinition.getMetadata();
+//		if (metadata.hasAnnotation(ComponentScan.class.getName())){
+//			Map<String, Object> annotationAttributes = metadata.getAnnotationAttributes(ComponentScan.class.getName());
+//			// basePackage ='' 当前类所在的包默认扫描包
+//		}
+//		ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner(beanFactory);
+//		scanner.scan("com.zhouyu");
+//
+//
+//		System.out.println(beanFactory.getBean("UserService"));
+////		// 等价于
+//		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+//		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 //		context.register(AppConfig1.class);
 
 //		AnnotationConfigApplicationContext parent = new AnnotationConfigApplicationContext(AppConfig.class);

@@ -1,16 +1,88 @@
-com/zhouyu/service/User.java
- com.zhouyu.service.User
+com/xushu/circulardependencies/aopdemo/InstanceA.java
+ com.xushu.circulardependencies.aopdemo.InstanceA
+com/xushu/circulardependencies/One/XuShuApplicationContext.java
+ com.xushu.circulardependencies.One.XuShuApplicationContext
+com/xushu/circulardependencies/lazydemo/IBService.java
+ com.xushu.circulardependencies.lazydemo.IBService
 com/zhouyu/aspect/ZhouyuAspect.java
  com.zhouyu.aspect.ZhouyuAspect
-com/zhouyu/service/UserServiceBase.java
- com.zhouyu.service.UserServiceBase
+com/xushu/circulardependencies/aopdemo/IInstanceB.java
+ com.xushu.circulardependencies.aopdemo.IInstanceB
+com/xushu/circulardependencies/lazydemo/IAService.java
+ com.xushu.circulardependencies.lazydemo.IAService
+com/xushu/circulardependencies/closedemo/InstanceB.java
+ com.xushu.circulardependencies.closedemo.InstanceB
 com/zhouyu/service/OrderService.java
  com.zhouyu.service.OrderService
+com/xushu/circulardependencies/aopdemo/TulingLogAspect.java
+ com.xushu.circulardependencies.aopdemo.TulingLogAspect
+com/xushu/circulardependencies/closedemo/MainClass.java
+ com.xushu.circulardependencies.closedemo.MainClass
+com/xushu/circulardependencies/lazydemo/AService.java
+ com.xushu.circulardependencies.lazydemo.AService
+com/xushu/circulardependencies/lazydemo/BService.java
+ com.xushu.circulardependencies.lazydemo.BService
+com/xushu/circulardependencies/One/JdkProxyBeanPostProcessor.java
+ com.xushu.circulardependencies.One.JdkProxyBeanPostProcessor
+com/xushu/circulardependencies/One/RunMainSpring.java
+ com.xushu.circulardependencies.One.RunMainSpring
+com/zhouyu/Test2.java
+ com.zhouyu.Test2
+com/xushu/circulardependencies/aopdemo/IInstanceA.java
+ com.xushu.circulardependencies.aopdemo.IInstanceA
+com/xushu/circulardependencies/closedemo/TulingLogAspect.java
+ com.xushu.circulardependencies.closedemo.TulingLogAspect
+com/xushu/circulardependencies/One/AService.java
+ com.xushu.circulardependencies.One.AService
+com/zhouyu/service/ZhouyuFactoryBean.java
+ com.zhouyu.service.ZhouyuFactoryBean
+com/xushu/circulardependencies/closedemo/IInstanceA.java
+ com.xushu.circulardependencies.closedemo.IInstanceA
+com/xushu/circulardependencies/aopdemo/InstanceC.java
+ com.xushu.circulardependencies.aopdemo.InstanceC
+com/xushu/circulardependencies/One/RunMain.java
+ com.xushu.circulardependencies.One.RunMain
+com/zhouyu/service/User.java
+ com.zhouyu.service.User
+com/xushu/circulardependencies/One/ObjectFactory.java
+ com.xushu.circulardependencies.One.ObjectFactory
+com/xushu/circulardependencies/closedemo/IInstanceB.java
+ com.xushu.circulardependencies.closedemo.IInstanceB
+com/xushu/circulardependencies/lazydemo/MainCons.java
+ com.xushu.circulardependencies.lazydemo.MainCons
+com/xushu/circulardependencies/aopdemo/MainClass.java
+ com.xushu.circulardependencies.aopdemo.MainClass
+com/xushu/circulardependencies/aopdemo/InstanceB.java
+ com.xushu.circulardependencies.aopdemo.InstanceB
+com/xushu/circulardependencies/One/JdkDynimcProxy.java
+ com.xushu.circulardependencies.One.JdkDynimcProxy
+com/xushu/circulardependencies/lazydemo/StartApp.java
+ com.xushu.circulardependencies.lazydemo.StartApp
+com/zhouyu/service/ZhouyuCondition.java
+ com.zhouyu.service.ZhouyuCondition
+com/xushu/circulardependencies/Singleton.java
+ com.xushu.circulardependencies.Singleton
 com/zhouyu/AppConfig.java
  com.zhouyu.AppConfig
+com/zhouyu/service/ZhouhyuBeanPostProcessor.java
+ com.zhouyu.service.ZhouhyuBeanPostProcessor
+com/xushu/circulardependencies/closedemo/InstanceA.java
+ com.xushu.circulardependencies.closedemo.InstanceA
+com/zhouyu/AppConfig1.java
+ com.zhouyu.AppConfig1
+com/xushu/circulardependencies/aopdemo/MyBeanPostProcessor.java
+ com.xushu.circulardependencies.aopdemo.MyBeanPostProcessor
+com/xushu/circulardependencies/One/BService.java
+ com.xushu.circulardependencies.One.BService
+com/zhouyu/service/UserServiceBase.java
+ com.zhouyu.service.UserServiceBase
+com/xushu/circulardependencies/aopdemo/IInstanceC.java
+ com.xushu.circulardependencies.aopdemo.IInstanceC
+com/xushu/circulardependencies/One/IAService.java
+ com.xushu.circulardependencies.One.IAService
+com/xushu/circulardependencies/One/IBService.java
+ com.xushu.circulardependencies.One.IBService
 com/zhouyu/service/UserService.java
  com.zhouyu.service.UserService
 com/zhouyu/Test.java
  com.zhouyu.Test
-com/zhouyu/service/ZhouyuCondition.java
- com.zhouyu.service.ZhouyuCondition
