@@ -14,10 +14,14 @@ com/xushu/circulardependencies/closedemo/InstanceB.java
  com.xushu.circulardependencies.closedemo.InstanceB
 com/zhouyu/service/OrderService.java
  com.zhouyu.service.OrderService
+com/xushu/circulardependencies/One/RunMain.java
+ com.xushu.circulardependencies.One.RunMain
 com/xushu/circulardependencies/aopdemo/TulingLogAspect.java
  com.xushu.circulardependencies.aopdemo.TulingLogAspect
 com/xushu/circulardependencies/closedemo/MainClass.java
  com.xushu.circulardependencies.closedemo.MainClass
+com/xushu/circulardependencies/One/AService.java
+ com.xushu.circulardependencies.One.AService
 com/xushu/circulardependencies/lazydemo/AService.java
  com.xushu.circulardependencies.lazydemo.AService
 com/xushu/circulardependencies/lazydemo/BService.java
@@ -32,16 +36,16 @@ com/xushu/circulardependencies/aopdemo/IInstanceA.java
  com.xushu.circulardependencies.aopdemo.IInstanceA
 com/xushu/circulardependencies/closedemo/TulingLogAspect.java
  com.xushu.circulardependencies.closedemo.TulingLogAspect
-com/xushu/circulardependencies/One/AService.java
- com.xushu.circulardependencies.One.AService
+com/zhouyu/service/UserService.java
+ com.zhouyu.service.UserService
 com/zhouyu/service/ZhouyuFactoryBean.java
  com.zhouyu.service.ZhouyuFactoryBean
 com/xushu/circulardependencies/closedemo/IInstanceA.java
  com.xushu.circulardependencies.closedemo.IInstanceA
 com/xushu/circulardependencies/aopdemo/InstanceC.java
  com.xushu.circulardependencies.aopdemo.InstanceC
-com/xushu/circulardependencies/One/RunMain.java
- com.xushu.circulardependencies.One.RunMain
+com/zhouyu/Test.java
+ com.zhouyu.Test
 com/zhouyu/service/User.java
  com.zhouyu.service.User
 com/xushu/circulardependencies/One/ObjectFactory.java
@@ -64,6 +68,8 @@ com/xushu/circulardependencies/Singleton.java
  com.xushu.circulardependencies.Singleton
 com/zhouyu/AppConfig.java
  com.zhouyu.AppConfig
+com/xushu/vip/service/XushuService.java
+ com.xushu.vip.service.XushuService
 com/zhouyu/service/ZhouhyuBeanPostProcessor.java
  com.zhouyu.service.ZhouhyuBeanPostProcessor
 com/xushu/circulardependencies/closedemo/InstanceA.java
@@ -82,7 +88,7 @@ com/xushu/circulardependencies/One/IAService.java
  com.xushu.circulardependencies.One.IAService
 com/xushu/circulardependencies/One/IBService.java
  com.xushu.circulardependencies.One.IBService
-com/zhouyu/service/UserService.java
- com.zhouyu.service.UserService
-com/zhouyu/Test.java
- com.zhouyu.Test
+com/xushu/vip/MainStart.java
+ com.xushu.vip.MainStart
+com/xushu/vip/service/UserService.java
+ com.xushu.vip.service.UserService

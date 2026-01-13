@@ -88,8 +88,8 @@ public class Test {
 //		// 等价于
 //		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 //		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-//		context.register(Test.class);
-//		AnnotatedGenericBeanDefinition beanDefinition = (AnnotatedGenericBeanDefinition)context.getBeanDefinition("UserService");
+//		context.register(AppConfig.class);
+//		AnnotatedGenericBeanDefinition beanDefinition = (AnnotatedGenericBeanDefinition)context.getBeanDefinition("userService");
 //		AnnotationMetadata metadata = beanDefinition.getMetadata();
 //		if (metadata.hasAnnotation(ComponentScan.class.getName())){
 //			Map<String, Object> annotationAttributes = metadata.getAnnotationAttributes(ComponentScan.class.getName());
@@ -99,7 +99,7 @@ public class Test {
 //		scanner.scan("com.zhouyu");
 //
 //
-//		System.out.println(beanFactory.getBean("UserService"));
+//		System.out.println(beanFactory.getBean("userService"));
 ////		// 等价于
 //		DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 //		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
